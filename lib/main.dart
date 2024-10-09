@@ -2,6 +2,7 @@ import 'package:app/core/configs/theme/app_theme.dart';
 import 'package:app/presentataion/splash/pages/splash.dart';
 import 'package:flutter/material.dart';
 
+
 void main (){
 
   runApp(const MyApp());
