@@ -1,18 +1,14 @@
 
 
 
-
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:app/presentataion/splash/bloc/splash_state.dart';
 
-class SplashCubit {}
+class SplashCubit extends Cubit<SplashState> {
+  SplashCubit() : super(DisplaySplash());
 
-class SplashCubit extends Cubit<SplashState>{
-
-  SplashCubit():super(DisplaySplash());
-
-  void appStarted() {
-    emit(
-      UnAuthenticated()
-    )
+  Future<void> appStarted() async {
+    await Future.delayed(const Duration(seconds: 2));
+    emit(UnAuthenticates());
   }
 }
